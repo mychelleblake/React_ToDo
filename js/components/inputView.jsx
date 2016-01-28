@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
+var ParseReact = require('parse-react'); 
+// require('./css/main.css');
 
 var InputView = React.createClass({
 	getInitialState: function () {
@@ -26,6 +27,12 @@ var InputView = React.createClass({
 	handleFormSubmit: function (event) {
 		event.preventDefault();
 		console.log(this.state);
+	ParseReact.Mutation.Create("Item", {
+		todoitem: this.state.toDoInput,
+		dateDue: this.state.toDoDue,
+		status: this.state.todoStatus,
+		Priority: this.state.toDoPriority
+	}).dispatch();
 	},
   render: function () {
     return (

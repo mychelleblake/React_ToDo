@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+// require('./css/main.css');
 
 var StatusView = React.createClass ({
 	render: function () {

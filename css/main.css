@@ -1,0 +1,55 @@
+/* MAIN CSS */
+
+#container {
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+}
+
+#navigation {
+
+}
+
+#navigation img {
+	width: 100px;
+	height: 75px;
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+#navigation h2 {
+	font-family: "Francois One", sans serif;
+	width: 200px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/* APP BOX */
+
+#appBox {
+	width: 700px;
+	height: 700px;
+	background-color: yellow;
+	margin: 0 auto;
+}
+
+/* INPUT VIEW */
+
+#inputBox {
+	margin-left: 10px;
+}
+
+	        	<input id="toDoInput" 
+	        	<input id="toDoDue" 
+	        	<select id="todoStatus" >
+	        	<select id="toDoPriority" 
+	        	<input type="submit" id="submitButton" value="Submit" />
+
+/* DISPLAY VIEW */
+
+
+          return <li>{todo.todoitem} {dueDate} {todo.status} {todo.Priority}</li>;
+
+
+

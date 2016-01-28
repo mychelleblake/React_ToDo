@@ -4,7 +4,8 @@ var DisplayView = require('./displayView.jsx');
 var Nav = require('./nav.jsx');
 var InputView = require('./inputView.jsx');
 var StatusView = require('./statusView.jsx');
-var ParseReact = require('parse-react'); //fix name
+var ParseReact = require('parse-react'); 
+// require('./css/main.css');
 
 //add others if DV works
 
