@@ -38,24 +38,30 @@ var InputView = React.createClass({
     return (
       <div>
         <div id="inputBox">
+        	<h3>Add a New To Do Item</h3>
         	<form onSubmit={this.handleFormSubmit}>
 	        	<input id="toDoInput" type="text" placeholder="Enter To Do Here" value={this.state.toDoInput} onChange={this.handleChangeToDoInput} />
 	
 	        	<input id="toDoDue" type="text" placeholder="Due Date?" value={this.state.toDoDue} onChange={this.handleChangeToDoDue} />
 
-	        	<select id="todoStatus" value={this.state.todoStatus} onChange={this.handleChangeToDoStatus}>
-	        		<option value="notstart">Not Started</option>
-	        		<option value="pending">Pending</option>
-	        		<option value="inprogress">In Progress</option>
-	        		<option value="complete">Completed</option>
-	        	</select>
+	        	<div className="selectItem">
+		        	<select id="todoStatus" value={this.state.todoStatus} onChange={this.handleChangeToDoStatus}>
+		        		<option value="notstart">Not Started</option>
+		        		<option value="pending">Pending</option>
+		        		<option value="inprogress">In Progress</option>
+		        		<option value="complete">Completed</option>
+		        	</select>
+	        	</div>
 
-	        	<select id="toDoPriority" value={this.state.toDoPriority} onChange={this.handleChangeToDoPriority}>
-	        		<option value="high">High</option>
-	        		<option value="medium">Medium</option>
-	        		<option value="low">Low</option>
-				</select>    	
-	        		<input type="submit" id="submitButton" value="Submit" />
+	        	<div className="selectItem">
+		        	<select id="toDoPriority" value={this.state.toDoPriority} onChange={this.handleChangeToDoPriority}>
+		        		<option value="high">High</option>
+		        		<option value="medium">Medium</option>
+		        		<option value="low">Low</option>
+					</select>    
+				</div>	
+
+	        		<input className="buttonSubmit" type="submit" id="submitButton" value="Submit" />
 	        </form>
         </div>
       </div>

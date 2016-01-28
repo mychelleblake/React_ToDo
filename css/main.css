@@ -1,7 +1,7 @@
 /* MAIN CSS */
 
 #container {
-	width: 800px;
+	width: 900px;
 	height: 800px;
 	margin: 0 auto;
 }
@@ -22,13 +22,13 @@
 	font-family: "Francois One", sans serif;
 	width: 200px;
 	display: inline-block;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 /* APP BOX */
 
 #appBox {
-	width: 700px;
+	width: 800px;
 	height: 700px;
 	background-color: yellow;
 	margin: 0 auto;
@@ -37,19 +37,87 @@
 /* INPUT VIEW */
 
 #inputBox {
-	margin-left: 10px;
+	margin-left: 20px;
+	padding: 0;
 }
 
-	        	<input id="toDoInput" 
-	        	<input id="toDoDue" 
-	        	<select id="todoStatus" >
-	        	<select id="toDoPriority" 
-	        	<input type="submit" id="submitButton" value="Submit" />
+#inputBox h3 {
+	font-family: "Francois One", sans serif;
+}
+
+#toDoInput {
+	width: 350px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#toDoDue {
+	width: 70px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#todoStatus select {
+	height: 20px;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+#toDoPriority {
+	height: 20px;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+.selectItem select {
+	font-size: 12px;
+	border: 0;
+	border-radius: 0;
+	width: 80px;
+	height: 20px;
+	display: inline-block;
+	-webkit-appearance: none;
+	padding-left: 5px;
+}
+
+.selectItem {
+	width: 80px;
+	height: 20px;
+	overflow: hidden;
+	border: 1px solid black;
+	border-radius: 5px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#submitButton input {
+	height: 20px;
+	width: 70px;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+.buttonSubmit {
+	height: 25px;
+	width: 70px;
+	margin-right: 5px;
+	display: inline-block;
+	font-size: 12px;
+	border-radius: 5px;
+	text-align: center;
+}
 
 /* DISPLAY VIEW */
 
-
-          return <li>{todo.todoitem} {dueDate} {todo.status} {todo.Priority}</li>;
+.listItems {
+	list-style-type: none;
+	text-decoration: none;
+	font-family: "Arial", sans-serif;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
 
 
 
