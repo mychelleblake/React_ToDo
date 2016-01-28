@@ -21,7 +21,7 @@ var App = React.createClass({
   render: function () {
     return (
       <div>
-        <div id="appBox">
+        <div id="appBox" className="appBoxBorders">
 
         	<Nav/>
         	<InputView/>

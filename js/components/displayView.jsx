@@ -21,7 +21,20 @@ var DisplayView = React.createClass({
       <ul>
         {this.props.todoItems.map(function(todo) {
           var dueDate = todo.dateDue.toString("MM/dd/yyyy");
-          return <li className="listItems">Item: {todo.todoitem} - Date Due: {dueDate} - Status: {todo.status} - Priority: {todo.Priority}</li>;
+          return <li className="listItems">
+            <div>
+              {todo.todoitem} 
+            </div>
+            <div>
+              {dueDate}
+            </div>
+            <div>
+              {todo.status}
+            </div>
+            <div>
+              {todo.Priority}
+            </div>
+          </li>;
         })}
       </ul>
     );

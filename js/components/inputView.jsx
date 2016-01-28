@@ -38,7 +38,7 @@ var InputView = React.createClass({
     return (
       <div>
         <div id="inputBox">
-        	<h3>Add a New To Do Item</h3>
+        	<h4>Add a New To Do Item</h4>
         	<form onSubmit={this.handleFormSubmit}>
 	        	<input id="toDoInput" type="text" placeholder="Enter To Do Here" value={this.state.toDoInput} onChange={this.handleChangeToDoInput} />
 	

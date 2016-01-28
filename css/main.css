@@ -1,13 +1,13 @@
 /* MAIN CSS */
+body {
+	background: url("/images/mochaGrunge.png") repeat;
+}
 
 #container {
 	width: 900px;
 	height: 800px;
 	margin: 0 auto;
-}
-
-#navigation {
-
+	margin-top: 25px;
 }
 
 #navigation img {
@@ -16,6 +16,8 @@
 	float: right;
 	margin-right: 10px;
 	margin-top: 10px;
+	border: black 3px solid;
+	border-radius: 5px;
 }
 
 #navigation h2 {
@@ -30,8 +32,27 @@
 #appBox {
 	width: 800px;
 	height: 700px;
-	background-color: yellow;
 	margin: 0 auto;
+	background-color: #5B978B;
+	padding-top: 10px;
+}
+
+.appBoxBorders {
+	-webkit-box-shadow: 
+		0px 0px 5px rgba(0,0,0,0.6),
+		0px 0px 0px 14px #fff,
+		0px 0px 0px 18px rgba(0,0,0,0.2),
+		6px 6px 8px 17px #555;
+	-moz-box-shadow:
+		0px 0px 5px rgba(0,0,0,0.6),
+		0px 0px 0px 14px #fff,
+		0px 0px 0px 18px rgba(0,0,0,0.2),
+		6px 6px 8px 17px #555;
+	box-shadow:
+		0px 0px 5px rgba(0,0,0,0.6),
+		0px 0px 0px 14px #fff,
+		0px 0px 0px 18px rgba(0,0,0,0.2),
+		6px 6px 8px 17px #555;
 }
 
 /* INPUT VIEW */
@@ -41,8 +62,10 @@
 	padding: 0;
 }
 
-#inputBox h3 {
+#inputBox h4 {
 	font-family: "Francois One", sans serif;
+	padding: 0;
+	margin: 0;
 }
 
 #toDoInput {
