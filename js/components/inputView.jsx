@@ -44,7 +44,7 @@ var InputView = React.createClass({
 	
 	        	<input id="toDoDue" type="text" placeholder="Due Date?" value={this.state.toDoDue} onChange={this.handleChangeToDoDue} />
 
-	        	<div className="selectItem">
+	        	<div className="selectItem1">
 		        	<select id="todoStatus" value={this.state.todoStatus} onChange={this.handleChangeToDoStatus}>
 		        		<option value="notstart">Not Started</option>
 		        		<option value="pending">Pending</option>
@@ -53,8 +53,8 @@ var InputView = React.createClass({
 		        	</select>
 	        	</div>
 
-	        	<div className="selectItem">
-		        	<select id="toDoPriority" value={this.state.toDoPriority} onChange={this.handleChangeToDoPriority}>
+	        	<div className="selectItem2">
+		        	<select id="toDoPriority" name="Priority" value={this.state.toDoPriority} onChange={this.handleChangeToDoPriority}>
 		        		<option value="high">High</option>
 		        		<option value="medium">Medium</option>
 		        		<option value="low">Low</option>
@@ -63,6 +63,9 @@ var InputView = React.createClass({
 
 	        		<input className="buttonSubmit" type="submit" id="submitButton" value="Submit" />
 	        </form>
+        </div>
+        <div>
+        	<hr/>
         </div>
       </div>
     )

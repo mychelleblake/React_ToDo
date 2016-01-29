@@ -3,6 +3,27 @@ body {
 	background: url("/images/mochaGrunge.png") repeat;
 }
 
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 0;
+    height: 10px;
+}
+
+hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #5B978B;
+}
+
 #container {
 	width: 900px;
 	height: 800px;
@@ -99,20 +120,52 @@ body {
 	border: 0;
 	border-radius: 0;
 	width: 80px;
-	height: 20px;
+	height: 25px;
 	display: inline-block;
 	-webkit-appearance: none;
 	padding-left: 5px;
 }
 
-.selectItem {
-	width: 80px;
-	height: 20px;
+.selectItem1 {
+	width: 90px;
+	height: 25px;
 	overflow: hidden;
-	border: 1px solid black;
-	border-radius: 5px;
 	display: inline-block;
 	margin-right: 5px;
+}
+
+.selectItem2 {
+	width: 60px;
+	height: 25px;
+	overflow: hidden;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#todoStatus {
+	position: absolute;
+	top: 138px;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 90px;
+	height: 25px;
+}
+
+#toDoPriority {
+	position: absolute;
+	top: 138px;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 60px;
+	height: 25px;
+}
+
+#todoStatus option {
+	text-align: center;
+}
+
+#toDoPriority option {
+	text-align: center;
 }
 
 #submitButton input {
@@ -140,7 +193,66 @@ body {
 	font-family: "Arial", sans-serif;
 	font-size: 14px;
 	margin-bottom: 5px;
+	height: 15px;
+}
+
+#displayItems h4 {
+	font-family: "Francois One", sans serif;
+	padding: 0;
+	margin: 0;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#displayItems {
+	width: 700px;
 }
 
 
+#toDoItemCol{
+ 	width: 300px;
+ 	margin-right: 5px;
+ 	padding: 0;
+ 	display: inline-block;
+ 	float: left;
+}
 
+#dueDateCol {
+	width: 100px;
+	margin-right: 5px;
+	float: left;
+ 	padding: 0;
+ 	 display: inline-block;
+}
+
+#statusCol {
+	width: 100px;
+	margin-right: 5px;
+	float: left;
+ 	padding: 0;
+ 	display: inline-block;
+}
+
+#priorityCol {
+	width: 100px;
+	margin-right: 5px;
+	float: left;
+	clear: right;
+ 	padding: 0;
+ 	display: inline-block;
+}
+
+/* Status View */
+
+#status {
+	margin-left: 20px;
+	width: 800px;
+}
+
+#status h4 {
+	font-family: "Francois One", sans serif;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}

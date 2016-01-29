@@ -18,25 +18,33 @@ var DisplayView = React.createClass({
   render: function() {
     // Render the text of each comment as a list item 
     return (
-      <ul>
-        {this.props.todoItems.map(function(todo) {
-          var dueDate = todo.dateDue.toString("MM/dd/yyyy");
-          return <li className="listItems">
-            <div>
-              {todo.todoitem} 
-            </div>
-            <div>
-              {dueDate}
-            </div>
-            <div>
-              {todo.status}
-            </div>
-            <div>
-              {todo.Priority}
-            </div>
-          </li>;
-        })}
-      </ul>
+      <div>
+        <div id="displayItems">
+        <h4>To Do Item List</h4>
+        <ul>
+          {this.props.todoItems.map(function(todo) {
+            var dueDate = todo.dateDue.toString("MM/dd/yyyy");
+            return <li className="listItems">
+              <div id="toDoItemCol">
+                {todo.todoitem} 
+              </div>
+              <div id="dueDateCol">
+                {dueDate}
+              </div>
+              <div id="statusCol">
+                {todo.status}
+              </div>
+              <div id="priorityCol">
+                {todo.Priority}
+              </div>
+            </li>;
+          })}
+        </ul>
+        </div>
+        <div>
+          <hr/>
+        </div>
+      </div>
     );
   }
 });
