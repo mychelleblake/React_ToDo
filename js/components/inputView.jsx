@@ -8,8 +8,9 @@ var InputView = React.createClass({
 		return {
 			toDoInput: "",
 			toDoDue: "",
-			todoStatus: "",
-			toDoPriority: ""
+			todoStatus: "Not Started",
+			toDoPriority: "High",
+			todoCategory: "Personal"
 		}
 	},
 	handleChangeToDoInput: function (event) {
@@ -24,14 +25,18 @@ var InputView = React.createClass({
 	handleChangeToDoPriority: function (event) {
 	this.setState({toDoPriority: event.target.value})
 	},
+	handleChangeToDoCategory: function (event) {
+	this.setState({todoCategory: event.target.value})
+	},
 	handleFormSubmit: function (event) {
 		event.preventDefault();
 		console.log(this.state);
 	ParseReact.Mutation.Create("Item", {
 		todoitem: this.state.toDoInput,
-		dateDue: this.state.toDoDue,
+		dateDue: new Date(this.state.toDoDue),  //convert into a date object
 		status: this.state.todoStatus,
-		Priority: this.state.toDoPriority
+		Priority: this.state.toDoPriority,
+		category: this.state.todoCategory
 	}).dispatch();
 	},
   render: function () {
@@ -46,18 +51,26 @@ var InputView = React.createClass({
 
 	        	<div className="selectItem1">
 		        	<select id="todoStatus" value={this.state.todoStatus} onChange={this.handleChangeToDoStatus}>
-		        		<option value="notstart">Not Started</option>
-		        		<option value="pending">Pending</option>
-		        		<option value="inprogress">In Progress</option>
-		        		<option value="complete">Completed</option>
+		        		<option value="Not Started">Not Started</option>
+		        		<option value="Pending">Pending</option>
+		        		<option value="In Progress">In Progress</option>
+		        		<option value="Completed">Completed</option>
 		        	</select>
+	        	</div>
+
+	        	<div className="selectItem3">
+	        		<select id="todoCategory" value={this.state.todoCategory} onChange={this.handleChangeToDoCategory}>
+	        			<option value="Business">Business</option>
+	        			<option value="Personal">Personal</option>
+	        			<option value="School">School</option>
+	        		</select>
 	        	</div>
 
 	        	<div className="selectItem2">
 		        	<select id="toDoPriority" name="Priority" value={this.state.toDoPriority} onChange={this.handleChangeToDoPriority}>
-		        		<option value="high">High</option>
-		        		<option value="medium">Medium</option>
-		        		<option value="low">Low</option>
+		        		<option value="High">High</option>
+		        		<option value="Medium">Medium</option>
+		        		<option value="Low">Low</option>
 					</select>    
 				</div>	
 

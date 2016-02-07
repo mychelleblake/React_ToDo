@@ -9,7 +9,7 @@ hr {
     border-top: medium double #333;
     color: #333;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     padding-bottom: 0;
     height: 10px;
 }
@@ -90,23 +90,41 @@ hr:after {
 }
 
 #toDoInput {
-	width: 350px;
+	width: 250px;
 	height: 20px;
 	display: inline-block;
 	margin-right: 5px;
 }
 
+#toDoInputEdit {
+	width: 250px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+}
 #toDoDue {
 	width: 70px;
 	height: 20px;
 	display: inline-block;
 	margin-right: 5px;
 }
-
+#toDoDueEdit {
+	width: 70px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+}
 #todoStatus select {
 	height: 20px;
 	margin-right: 5px;
 	display: inline-block;
+	float: left;
+}
+#todoStatusEdit select {
+	height: 20px;
+	margin-right: 5px;
+	display: inline-block;
+	float: left;
 }
 
 #toDoPriority {
@@ -114,8 +132,15 @@ hr:after {
 	margin-right: 5px;
 	display: inline-block;
 }
-
-.selectItem select {
+#toDoPriorityEdit {
+	height: 20px;
+	margin-right: 5px;
+	display: inline-block;
+}
+#todoCategory select {
+	margin-right: 5px;
+	display: inline-block;
+	float: left;
 	font-size: 12px;
 	border: 0;
 	border-radius: 0;
@@ -125,6 +150,30 @@ hr:after {
 	-webkit-appearance: none;
 	padding-left: 5px;
 }
+#todoCategoryEdit select {
+	margin-right: 5px;
+	display: inline-block;
+	float: left;
+	font-size: 12px;
+	border: 0;
+	border-radius: 0;
+	width: 80px;
+	height: 25px;
+	display: inline-block;
+	-webkit-appearance: none;
+	padding-left: 5px;
+
+}
+/*.selectItem select {
+	font-size: 12px;
+	border: 0;
+	border-radius: 0;
+	width: 80px;
+	height: 25px;
+	display: inline-block;
+	-webkit-appearance: none;
+	padding-left: 5px;
+}*/
 
 .selectItem1 {
 	width: 90px;
@@ -142,6 +191,14 @@ hr:after {
 	margin-right: 5px;
 }
 
+.selectItem3 {
+	width: 90px;
+	height: 25px;
+	overflow: hidden;
+	display: inline-block;
+	margin-right: 5px;
+}
+
 #todoStatus {
 	position: absolute;
 	top: 138px;
@@ -151,6 +208,14 @@ hr:after {
 	height: 25px;
 }
 
+#todoStatusEdit {
+	position: absolute;
+	top: 188px;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 90px;
+	height: 25px;
+}
 #toDoPriority {
 	position: absolute;
 	top: 138px;
@@ -159,16 +224,51 @@ hr:after {
 	width: 60px;
 	height: 25px;
 }
+#toDoPriorityEdit {
+	position: absolute;
+	top: 188px;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 60px;
+	height: 25px;
+}
+#todoCategory {
+	position: absolute;
+	top: 138px;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 90px;
+	height: 25px;
+}
+#todoCategoryEdit {
+	position: absolute;
+	top: 188px;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 90px;
+	height: 25px;
+}
 
 #todoStatus option {
+	text-align: center;
+}
+#todoStatusEdit option {
 	text-align: center;
 }
 
 #toDoPriority option {
 	text-align: center;
 }
-
+#toDoPriorityEdit option {
+	text-align: center;
+}
 #submitButton input {
+	height: 20px;
+	width: 70px;
+	margin-right: 5px;
+	display: inline-block;
+}
+#submitButtonEdit input {
 	height: 20px;
 	width: 70px;
 	margin-right: 5px;
@@ -184,7 +284,15 @@ hr:after {
 	border-radius: 5px;
 	text-align: center;
 }
-
+.buttonSubmitEdit {
+	height: 25px;
+	width: 70px;
+	margin-right: 5px;
+	display: inline-block;
+	font-size: 12px;
+	border-radius: 5px;
+	text-align: center;
+}
 /* DISPLAY VIEW */
 
 .listItems {
@@ -210,37 +318,130 @@ hr:after {
 
 
 #toDoItemCol{
- 	width: 300px;
+ 	width: 200px;
  	margin-right: 5px;
  	padding: 0;
  	display: inline-block;
  	float: left;
 }
 
-#dueDateCol {
-	width: 100px;
+#todoItemCol h4 {
+	width: 200px;
 	margin-right: 5px;
+	padding: 0;
+	display: inline-block;
 	float: left;
- 	padding: 0;
- 	 display: inline-block;
 }
 
-#statusCol {
-	width: 100px;
+#dueDateCol {
+	width: 80px;
 	margin-right: 5px;
 	float: left;
  	padding: 0;
  	display: inline-block;
 }
 
+#dueDateCol h4 {
+	width: 80px;
+	margin-right: 5px;
+	float: left;
+ 	padding: 0;
+ 	display: inline-block;
+}
+
+#statusCol {
+	width: 80px;
+	margin-right: 5px;
+	float: left;
+ 	padding: 0;
+ 	display: inline-block;
+}
+
+#statusCol h4 {
+	width: 80px;
+	margin-right: 5px;
+	float: left;
+ 	padding: 0;
+ 	display: inline-block;
+}
+
+#catCol {
+	width: 80px;
+	margin-right: 5px;
+	float: left;
+	padding: 0;
+	display: inline-block;
+}
+
+#catCol h4 {
+	width: 80px;
+	margin-right: 5px;
+	float: left;
+	padding: 0;
+	display: inline-block;
+}
+
 #priorityCol {
-	width: 100px;
+	width: 80px;
 	margin-right: 5px;
 	float: left;
 	clear: right;
  	padding: 0;
  	display: inline-block;
 }
+
+#deleteButton {
+	width: 50px;
+	margin-right: 5px;
+	float: left;
+	clear: right;
+ 	padding: 0;
+ 	display: inline-block;
+}
+#editButton {
+	width: 50px;
+	margin-right: 5px;
+	float: left;
+	clear: right;
+ 	padding: 0;
+ 	display: inline-block;
+}
+#colTitles {
+	width: 850px;
+	height: 15px;
+	display: inline-block;
+}
+
+#titleUL li {
+	float: left;
+	width: 86px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#titleUL li:first-child {
+	width: 200px;
+}
+
+#titleUL {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 850px;
+	display: inline-block;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.titles {
+	list-style-type: none;
+	font-family: "Francois", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
 
 /* Status View */
 
