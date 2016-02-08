@@ -79,6 +79,7 @@ var ItemToDo = React.createClass({
 	renderEditview: function() {
 		return (
 		<form onSubmit={this.handleFormSubmit}>
+	        	<div id="editingDiv">
 	        	<input id="toDoInputEdit" type="text" placeholder="Enter To Do Here" value={this.state.toDoInput} onChange={this.handleChangeToDoInput} />
 	
 	        	<input id="toDoDueEdit" type="text" placeholder="Due Date?" value={this.state.toDoDue} onChange={this.handleChangeToDoDue} />
@@ -109,7 +110,7 @@ var ItemToDo = React.createClass({
 				</div>	
 
 	        		<input className="buttonSubmitEdit" type="submit" id="submitButton" value="Submit" />
-
+	        	</div>
 	        </form>
 	)
 	},

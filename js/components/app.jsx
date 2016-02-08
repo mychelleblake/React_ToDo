@@ -9,6 +9,7 @@ var ParseReact = require('parse-react');
 
 //add others if DV works
 
+
 var App = React.createClass({
   mixins: [ParseReact.Mixin], // Enable query subscriptions 
     observe: function() {
@@ -18,6 +19,13 @@ var App = React.createClass({
       todoData: (new Parse.Query('Item'))
     };
   },
+  getInitialState: function () {
+    return {sortColumn: "objectId",
+     }
+  },
+  changeSortColumn: function (newSortColumn) {
+    this.setState({sortColumn: newSortColumn})
+  },
   render: function () {
     return (
       <div>
@@ -25,8 +33,8 @@ var App = React.createClass({
 
         	<Nav/>
         	<InputView/>
-        	<DisplayView todoItems={this.data.todoData} />
-        	<StatusView/>
+        	<DisplayView todoItems={this.data.todoData} sortColumn={this.state.sortColumn} />
+        	<StatusView todoItems={this.data.todoData} changeSortColumn={this.changeSortColumn} />
 
         </div>
       </div>

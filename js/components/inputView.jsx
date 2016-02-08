@@ -77,7 +77,7 @@ var InputView = React.createClass({
 	        		<input className="buttonSubmit" type="submit" id="submitButton" value="Submit" />
 	        </form>
         </div>
-        <div>
+        <div id="bottomHR">
         	<hr/>
         </div>
       </div>

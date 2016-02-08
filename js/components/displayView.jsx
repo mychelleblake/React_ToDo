@@ -1,13 +1,15 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ItemToDo = require ("./itemToDo.jsx");
-// require('./css/main.css');
+var _ = require("underscore");
 
 var DisplayView = React.createClass({
 
  
   render: function() {
     // Render the text of each comment as a list item 
+    var sortedToDos = _.sortBy(this.props.todoItems,this.props.sortColumn);
+
     return (
       <div>
         <div id="displayItems">
@@ -22,7 +24,7 @@ var DisplayView = React.createClass({
           </ul>
       </div>
         <ul>
-          {this.props.todoItems.map(function(todo) {
+          {sortedToDos.map(function(todo) {
           return <ItemToDo todo={todo} />
           })}
         </ul>

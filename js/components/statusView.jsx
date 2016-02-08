@@ -1,30 +1,32 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-// require('./css/main.css');
+var ParseReact = require('parse-react'); 
+
 
 var StatusView = React.createClass ({
+	sortColStatus: function () {
+		this.props.changeSortColumn("status")
+	},
+	sortColPriority: function () {
+		this.props.changeSortColumn("Priority")
+	},
+	sortColDueDate: function () {
+		this.props.changeSortColumn("dateDue")
+	},
 	render: function () {
+		var numberToDos = this.props.todoItems.length;
+
 		return (
 			<div>
 				<div id="status">
 					<div id="countToDos">
-						<h4>How Many To Do Items are There?</h4>
-						<button id="numTodos" type="submit"># of Items</button>
-						<button id="allTodos" type="submit">All Items</button>
+						<h4>Number of Items: {numberToDos}</h4>
 					</div>
 					<div id="status1ToDos">
-						<h4>What is the Status of the To Do Items?</h4>
-						<button id="activeToDos" type="submit">Active Items</button>
-						<button id="notStartToDos" type="submit">Items Not Started</button>
-						<button id="pendingToDos" type="submit">Pending Items</button>
-						<button id="completedToDos" type="submit">Completed Items</button>					 
-					</div>
-					<div id="status2ToDos">
-						<h4>Priority of To Do Items?</h4>
-						<button id="statusHigh" type="submit">High</button>
-						<button id="statusMedium" type="submit">Medium</button>
-						<button id="statusLow" type="submit">Low</button>
-
+						<h4>Sort by:</h4>
+						<button id="sortByStatus" type="submit" onClick={this.sortColStatus}>Status</button>					 
+						<button id="sortByPriority" type="submit" onClick={this.sortColPriority}>Priority</button>
+						<button id="sortByDateDue" type="submit" onClick={this.sortColDueDate}>Date Due</button>
 					</div>
 				</div>
 			<div>
