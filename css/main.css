@@ -508,3 +508,47 @@ hr:after {
 	height: 10px;
 	margin-top: 10px;
 }
+
+
+
+/* EDITING INPUT AREA */
+
+
+#editingDiv {
+	width: 750px;
+	height: 20px;
+	display: inline-block;
+}
+
+#toDoInputEdit {
+	margin-bottom: 10px;
+	padding: 0;
+	height: 15px;
+	width: 195px;
+	float: left;
+}  
+
+#toDoDueEdit {
+	float: left;
+	height: 15px;
+}
+
+#todoStatusEdit {
+	float: left;
+}
+
+#todoCategoryEdit {
+	float: left;
+}
+
+#toDoPriorityEdit {
+	float: left;
+}
+
+#buttonSubmitEdit {
+	float: left;
+	height: 15px;
+	width: 20px;
+}
+
+

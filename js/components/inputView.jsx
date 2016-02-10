@@ -8,9 +8,9 @@ var InputView = React.createClass({
 		return {
 			toDoInput: "",
 			toDoDue: "",
-			todoStatus: "Not Started",
-			toDoPriority: "High",
-			todoCategory: "Personal"
+			todoStatus: "notstart",
+			toDoPriority: "high",
+			todoCategory: "personal"
 		}
 	},
 	handleChangeToDoInput: function (event) {
@@ -26,7 +26,7 @@ var InputView = React.createClass({
 	this.setState({toDoPriority: event.target.value})
 	},
 	handleChangeToDoCategory: function (event) {
-	this.setState({todoCategory: event.target.value})
+	this.setState({toDoCategory: event.target.value})
 	},
 	handleFormSubmit: function (event) {
 		event.preventDefault();
@@ -77,7 +77,7 @@ var InputView = React.createClass({
 	        		<input className="buttonSubmit" type="submit" id="submitButton" value="Submit" />
 	        </form>
         </div>
-        <div id="bottomHR">
+        <div>
         	<hr/>
         </div>
       </div>

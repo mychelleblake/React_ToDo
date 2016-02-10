@@ -84,6 +84,22 @@ var ItemToDo = React.createClass({
 	
 	        	<input id="toDoDueEdit" type="text" placeholder="Due Date?" value={this.state.toDoDue} onChange={this.handleChangeToDoDue} />
 
+	        	<div className="selectItem2">
+		        	<select id="toDoPriorityEdit" name="Priority" value={this.state.toDoPriority} onChange={this.handleChangeToDoPriority}>
+		        		<option value="High">High</option>
+		        		<option value="Medium">Medium</option>
+		        		<option value="Low">Low</option>
+					</select>    
+				</div>	
+
+				<div className="selectItem3">
+	        		<select id="todoCategoryEdit" value={this.state.todoCategory} onChange={this.handleChangeToDoCategory}>
+	        			<option value="Business">Business</option>
+	        			<option value="Personal">Personal</option>
+	        			<option value="School">School</option>
+	        		</select>
+	        	</div>
+
 	        	<div className="selectItem1">
 		        	<select id="todoStatusEdit" value={this.state.todoStatus} onChange={this.handleChangeToDoStatus}>
 		        		<option value="Not Started">Not Started</option>
@@ -92,22 +108,6 @@ var ItemToDo = React.createClass({
 		        		<option value="Completed">Completed</option>
 		        	</select>
 	        	</div>
-
-	        	<div className="selectItem3">
-	        		<select id="todoCategoryEdit" value={this.state.todoCategory} onChange={this.handleChangeToDoCategory}>
-	        			<option value="Business">Business</option>
-	        			<option value="Personal">Personal</option>
-	        			<option value="School">School</option>
-	        		</select>
-	        	</div>
-
-	        	<div className="selectItem2">
-		        	<select id="toDoPriorityEdit" name="Priority" value={this.state.toDoPriority} onChange={this.handleChangeToDoPriority}>
-		        		<option value="High">High</option>
-		        		<option value="Medium">Medium</option>
-		        		<option value="Low">Low</option>
-					</select>    
-				</div>	
 
 	        		<input className="buttonSubmitEdit" type="submit" id="submitButton" value="Submit" />
 	        	</div>
