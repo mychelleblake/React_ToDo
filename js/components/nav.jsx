@@ -8,7 +8,9 @@ var Nav = React.createClass ({
 			<div>
 				<div id="navigation">
 					<h2>My To Do List</h2>
-					<img src="<a href="http://imgur.com/mVrEIkA">
+					<img src="http://i.imgur.com/mVrEIkA.jpg"/>
+
+				</div>
 			</div>
 		)
 	}

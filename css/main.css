@@ -1,7 +1,9 @@
 /* MAIN CSS */
 body {
-	background: url("a href="http://imgur.com/eHL5JSk") repeat;
+	background: url("http://i.imgur.com/eHL5JSk.png");
+	background-repeat: repeat;
 }
+
 
 hr {
     padding: 0;
